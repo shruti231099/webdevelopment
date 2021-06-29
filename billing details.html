@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LG-TV BILL DETAILS</title>
+    <!-- Remove the Comments and fill in relevant code -->
+    <!-- Write code wherever necessary  -->
+    <!-- Do specify all the component-ids (incl. div ids) correctly for your code to get evaluated successfully -->
+
+    <style>
+        input[type="number"] {
+            width: 98%;
+        }
+        
+        input[type="text"] {
+            width: 98%;
+        }
+        
+        input[type="date"] {
+            width: 98%;
+        }
+        
+        input[type="email"] {
+            width: 98%;
+        }
+        
+        input[type="tel"] {
+            width: 98%;
+        }
+        
+        select {
+            width: 98%;
+        }
+        
+        body {
+            background-image: url('download.jfif');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 55%;
+            font-weight: bold;
+        }
+        
+        div {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            color: #FFFFFF;
+            font-size: 20px;
+        }
+        
+        h3 {
+            /* Fill the attributes and values */
+            color: #FFFFFF;
+            background-color: #66FF99;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 50%;
+            font-family: Verdana;
+            padding: 5px;
+            border-radius: 6px;
+        }
+        
+        table,
+        td,
+        tr {
+            /* Fill the attributes and values */
+            width: 50%;
+            border-style: solid 1px;
+            margin-left: auto;
+            margin-right: auto;
+            border-spacing: 1px;
+            border-radius: 6px;
+            color: #66FF99;
+            padding: 1px;
+        }
+        
+         ::-webkit-input-placeholder {
+            color: #696969;
+            font-weight: bold;
+        }
+        
+        #submit {
+            /* Fill the attributes and values */
+            color: #FFFFFF;
+            background-color: #66FF99;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px;
+            width: 50%;
+            font-family: Verdana;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+        
+        #result1,#result2 {
+            /* Fill the attributes and values */
+            color: #66FF99;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>
+            <!-- Fill the heading text -->
+            Pixel LG TV Dealers - Purchase Entry
+        </h3>
+        <form onsubmit="return display()">
+            <table>
+                <tr>
+                    <td>purchase date</td>
+                    <td>
+                        <input type="text" id="pdate" required onfocus="today()">
+                    </td>
+                </tr>
+		<tr>
+                    <td>Customer Name</td>
+                    <td>
+                        <!-- Fill the code for Customer Name -->
+                        <input type="text" id="cname" placeholder="Enter the customer name" pattern="[a-zA-Z]+" required>
+                    </td>
+                </tr>
+		<tr>
+                    <td>Address</td>
+                    <td>
+                        <textarea id="address" placeholder="Enter the address" rows="4" cols="50" required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td>
+                        <!-- Fill the code for Phone Number -->
+                        <input type="text" id="phno" required pattern="[7-9]{1}[0-9]{9}" placeholder="Enter the phone number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>LG TV Type</td>
+                    <td>
+                        <select id="tvname">
+                            <option value="Select TV Type..">Select TV Type..</option>
+                            <option value="HD Ready TV">HD Ready TV</option>
+                            <option value="LED HD-Ready TV">LED HD-Ready TV</option>
+                            <option value="4K UHD Smart LED TV">4K UHD Smart LED TV</option>
+			    <option value="LED Full HD TV">LED Full HD TV</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Model</td>
+                    <td>
+                        <select id="model">
+                            <option value="Select model...">Select model..</option>
+                            <option value="32LM560BPTC">32LM560BPTC</option>
+                            <option value="32LM636BPTB">32LM636BPTB</option>
+                            <option value="55UM7300PTA">55UM7300PTA</option>
+			    <option value="43LM5600PTC">43LM5600PTC</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Screen Size(diagonal)</td>
+                    <td>
+                        <select id="size">
+                            <option value="Select screen size..">Select screen size..</option>
+                            <option value="32 Inches">32 Inches</option>
+                            <option value="55 Inches">55 Inches</option>
+                            <option value="43 Inches">43 Inches</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Warrenty</td>
+                    <td>
+                        <input type="number" id="warrenty" required placeholder="Enter warrenty in years">
+                    </td>
+                </tr>
+		 <tr>
+                        <td>Purchase cost</td>
+                        <td><input type="range" id="cost" min="20000" max="60000" value=20000 oninput="markOutputId.value=cost.value">
+                        <output name="markOutputName" id="markOutputId"></output></td>
+                    </tr>
+		<tr>
+                    <td>payment type</td>
+                    <td>
+                        <select id="ptype">
+                            <option value="Card">Card</option>
+                            <option value="Cash">Cash</option>
+                        </select></td>
+                </tr>
+		<tr>
+                    <td>Card no.</td>
+                    <td>
+                        <input type="tel" id="cardno" required placeholder="Enter the card number" pattern="[0-9\s]{13,19}">
+                    </td>
+                </tr>
+		<tr>
+                    <td>Tax%</td>
+                    <td>
+                        <input type="number" id="tax" required placeholder="Enter the tax%">
+                    </td>
+                </tr>
+            </table>
+
+            <p>
+                <!-- Fill the code for Submit -->
+                <input type="submit" id="submit" value="CONFIRM PURCHASE" onclick="display()">
+            </p>
+
+            <div id="result1"> </div>
+	        <div id="result2"> </div>
+        </form>
+    </div>
+    <!--Write necessary code wherever needed to complete this code challenge  -->
+    <script>
+
+	function today(){
+		var n =  new Date();
+		var y = n.getFullYear();
+		var m = n.getMonth() + 1;
+		var d = n.getDate();
+		document.getElementById("pdate").value = m + "/" + d + "/" + y;
+	}
+ 
+
+        function display() {
+            /* Fill  the Javascript code to display the bill amount */
+            var mod = document.getElementById("model").value;
+            var ssize= document.getElementById("size").value;
+            var tvtype =document.getElementById("tvname").value;
+            document.getElementById("result1").innerHTML="Purchase of an LG "+mod+" - " +ssize+" ," +tvtype+" has been logged ! ";
+            var tax = document.getElementById("tax").value;
+            var purchaseamount=document.getElementById("cost").value;
+            var amount = Math.round(parseInt(purchaseamount)+parseInt(purchaseamount*(tax/100)));
+            var type=document.getElementById("ptype").value;
+            document.getElementById("result2").innerHTML= "An amount of Rs. "+amount+ " , inclusive of tax has been received by "+type;
+            
+            return false;
+        }
+    </script>
+</body>
+
+</html>

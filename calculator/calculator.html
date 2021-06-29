@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Human Calculator</title>
+		<script src="C:\Users\SHRUTI KUMAR\Desktop\calculator\calculator.js"></script>
+		<link href="C:\Users\SHRUTI KUMAR\Desktop\calculator\calculator.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<style>
+			.container{
+				height: 65%;
+				width: 85%;
+			}
+		</style>
+		 </head>
+  <body>
+    <header>
+
+	        <h1>Human Calculator</h1>
+	        <h4>Do as many correct calculations possible inside a minute.</h4>
+    </header>
+    <div id="start_btn"> 
+    	<button id="start" class="btn" onclick="show()">Start Game</button>
+    </div>
+    <h2></h2>
+    <div class="container">
+    	<div class="row mt-5">
+    		<div class="col-md-3">
+    			<div class="card">
+    				<div id="fnumUI" class="card-body display-1">4</div>
+    			</div>
+    		</div>
+    		<div class="col-md-3">
+    			<div class="card">
+    				<div id ="opUI" class="card-body display-1">+</div>
+    			</div>
+    		</div>
+    		<div class="col-md-3">
+    			<div class="card">
+    				<div id="snumUI" class="card-body display-1">4</div>
+    			</div>
+    		</div>
+    		<div class="col-md-3">
+    			<div class="card">
+    				<input id="user_input" class="form-control" onkeypress="action()">
+    			</div>
+    		</div>
+    	</div>
+    	<div class="row mt-4">
+    		<div class="col-md-4">
+    			<div class="card">
+    				<h2 class="card-title">Timer</h2>
+    				<div id ="time" class="card-body display-1">30</div>
+    			</div>
+    		</div>
+    		<div class="col-md-4">
+    			<div class="card">
+    				<h2 class="card-title">Response</h2>
+    				<div class="card-body display-2">Correct</div>
+    			</div>
+    		</div>
+    		<div class="col-md-4">
+    			<div class="card">
+    				<h2 class="card-title">Score</h2>
+    				<div id ="score" class="card-body display-1">0</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</body>
+</html>
